@@ -1,7 +1,13 @@
 package com.example.zheng.maptreasure;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -11,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.zheng.maptreasure.commons.ActivityUtils;
 import com.example.zheng.maptreasure.commons.RegexUtils;
+import com.example.zheng.maptreasure.register.RegisterActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,14 +32,26 @@ public class MainActivity extends AppCompatActivity {
     EditText et_login_user;
     @BindView(R.id.et_login_password)
     EditText et_login_password;
+    @BindView(R.id.toolBar)
+    Toolbar toolbar;
     private String userName;
     private String passWord;
     private ActivityUtils utils;
-
+public static final String ACTION_ENTER_HOME="action.enter.home";
+    //广播接收器,接收广播后关闭当前页面
+    public final BroadcastReceiver receiver=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            finish();
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //注册本地的广播接收器,动态注册
+        IntentFilter filter=new IntentFilter(ACTION_ENTER_HOME);
+        LocalBroadcastManager.getInstance(this).registerReceiver(receiver,filter);
 
     }
 
@@ -40,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
     public void onContentChanged() {
         super.onContentChanged();
         ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
+//        //设置左上角小图标
+//        if (getSupportActionBar()!=null){
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//            getSupportActionBar().setTitle(getTitle());
+//        }
         et_login_user.addTextChangedListener(watcher);
         et_login_password.addTextChangedListener(watcher);
     }

@@ -6,17 +6,23 @@
     android:background="#C1FFC1"
     android:orientation="vertical"
     tools:context="com.example.zheng.maptreasure.RegisterActivity">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:titleTextColor="#2f4f4f"
+    android:id="@+id/toolBar_register">
 
+</android.support.v7.widget.Toolbar>
     <EditText
         android:id="@+id/et_register_user"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:hint="给自己取一个名字吧"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
         android:background="@drawable/edit_bg_long"
-        android:drawableLeft="@drawable/ic_person_white"/>
+        android:drawableLeft="@drawable/selector_ic_person"/>
     <EditText
         android:id="@+id/et_register_password"
         android:layout_width="match_parent"
@@ -26,7 +32,7 @@
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
         android:background="@drawable/edit_bg_long"
-        android:drawableLeft="@drawable/ic_lock_white"/>
+        android:drawableLeft="@drawable/selector_ic_lock"/>
     <EditText
         android:id="@+id/et_register_pass"
         android:layout_width="match_parent"
@@ -36,12 +42,12 @@
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
         android:background="@drawable/edit_bg_long"
-        android:drawableLeft="@drawable/ic_lock_white"/>
+        android:drawableLeft="@drawable/selector_ic_lock"/>
     <Button
         android:id="@+id/btn_regist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="#C0FF3E"

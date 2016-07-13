@@ -13,6 +13,7 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:titleTextColor="#2F4F4F"
         android:id="@+id/toolBar">
     </android.support.v7.widget.Toolbar>
     <LinearLayout
@@ -27,7 +28,7 @@
             android:layout_height="50dp"
             android:id="@+id/et_login_user"
             android:hint="用户名"
-            android:drawableLeft="@drawable/ic_person_white"
+            android:drawableLeft="@drawable/selector_ic_person"
             android:background="@drawable/edit_bg_long"
             />
         <EditText
@@ -36,7 +37,7 @@
             android:layout_marginTop="50dp"
             android:inputType="textPassword"
             android:id="@+id/et_login_password"
-            android:drawableLeft="@drawable/ic_lock_white"
+            android:drawableLeft="@drawable/selector_ic_lock"
             android:background="@drawable/edit_bg_long"
             android:hint="请输入密码"
             />
