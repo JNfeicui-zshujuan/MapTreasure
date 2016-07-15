@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zheng.maptreasure.account.AccountActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_world"
+        android:orientation="vertical">
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/iv_userIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/user_icon"
+            app:border="true"
+            app:border_color="#16f5f5f5"
+            app:border_width="8dp"
+            app:selector="true"
+            app:selector_color="#4d000000"
+            app:selector_stroke_color="#16f5f5f5"
+            app:selector_stroke_width="8dp"
+            app:shadow="false" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_userIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="寻宝达人"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="33dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/divider_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_list_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_account_circle"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="用户名"
+            android:textColor="@android:color/white"
+             />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical|right"
+            android:text="寻宝达人"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/divider_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/selector_list_item_bg"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_lock_white"
+            android:text="密码"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:drawablePadding="8dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/right_arrow"
+            android:text="*******"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|right"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/divider_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/selector_list_item_bg"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_autorenew"
+            android:text="版本更新"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:drawablePadding="8dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/right_arrow"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|right"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/divider_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/selector_list_item_bg"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_return"
+            android:text="退出"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:drawablePadding="8dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/right_arrow"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|right"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/divider_line" />
+
+
+</LinearLayout>

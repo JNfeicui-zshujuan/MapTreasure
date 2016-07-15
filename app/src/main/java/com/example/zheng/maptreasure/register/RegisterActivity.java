@@ -48,7 +48,7 @@ public class RegisterActivity extends MvpActivity<RegisterView, RegisterPresente
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        utils=new ActivityUtils(this);
+        utils = new ActivityUtils(this);
     }
 
     @Override
@@ -73,10 +73,13 @@ public class RegisterActivity extends MvpActivity<RegisterView, RegisterPresente
     public RegisterPresenter createPresenter() {
         return new RegisterPresenter();
     }
-@OnClick(R.id.btn_regist)
-public void register(){
-    getPresenter().register();
-}
+
+    @OnClick(R.id.btn_regist)
+    public void register() {
+        //执行业务逻辑
+        getPresenter().register(new User(userName,passWord));
+    }
+
     //选项菜单处理
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -131,12 +134,12 @@ public void register(){
         utils.startActivity(HomeActivity.class);
         finish();
         //关闭入口的main界面,发送广播
-        Intent intent=new Intent(MainActivity.ACTION_ENTER_HOME);
+        Intent intent = new Intent(MainActivity.ACTION_ENTER_HOME);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
     @Override
-    public void showMessage() {
+    public void showMessage(String s) {
 
     }
 }

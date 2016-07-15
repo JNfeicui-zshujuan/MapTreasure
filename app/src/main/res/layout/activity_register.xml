@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#C1FFC1"
     android:orientation="vertical"
-    tools:context="com.example.zheng.maptreasure.RegisterActivity">
+    tools:context="com.example.zheng.maptreasure.register.RegisterActivity">
 <android.support.v7.widget.Toolbar
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -29,6 +29,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:hint="这里是密码"
+        android:inputType="textPassword"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
         android:background="@drawable/edit_bg_long"
@@ -39,6 +40,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:hint="确认一下"
+        android:inputType="textPassword"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
         android:background="@drawable/edit_bg_long"

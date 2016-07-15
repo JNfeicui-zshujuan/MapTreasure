@@ -13,5 +13,5 @@ public interface RegisterView extends MvpView {
     //登录home 界面
     void EnterHomeActivty();
     //显示信息
-    void showMessage();
+    void showMessage(String msg);
 }
