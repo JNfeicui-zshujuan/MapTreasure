@@ -13,7 +13,7 @@ public class UploadResult {
         return msg;
     }
 
-    public String getCount() {
+    public int  getCount() {
         return Count;
     }
 
@@ -22,7 +22,7 @@ public class UploadResult {
     }
 
     @SerializedName("urlcount")
-    private String Count;
+    private int  Count;
     @SerializedName("smallImgUrl")
     private String imageUrl;
 }

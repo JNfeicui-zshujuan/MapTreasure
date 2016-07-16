@@ -25,8 +25,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.balysv.materialmenu:material-menu-toolbar:1.5.4'
-    compile 'com.jakewharton:butterknife:8.2.1'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
     compile 'com.android.support:support-v4:23.2.1'
     compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
     compile 'com.google.code.gson:gson:2.7'
@@ -34,4 +34,6 @@ dependencies {
     compile 'org.hybridsquad.android.photocropper:library:2.1.0'
     compile 'com.pkmmte.view:circularimageview:1.1'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
 }

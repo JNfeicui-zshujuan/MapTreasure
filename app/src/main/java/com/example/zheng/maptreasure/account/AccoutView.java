@@ -8,7 +8,7 @@ import com.hannesdorfmann.mosby.mvp.MvpView;
 public interface AccoutView extends MvpView {
     void showProgress();
     void hideProgress();
-    void showMessage();
+    void showMessage(String string );
     //更新头像
-    void updataPhoto();
+    void updataPhoto(String url);
 }
