@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+        <!-- 百度地图Key设置 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="RplE4FhpLTwIX2BDTrkmafa1diXIfTPx"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
