@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="寻宝"
+            android:textSize="22dp" />
+    </android.support.v7.widget.Toolbar>
+
+<!--地图视图的宝藏-->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.zheng.maptreasure.home.HomeActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar" />
+    <!--列表视图宝藏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout"
+        android:layout_below="@+id/toolBar">
+
+    </FrameLayout>
+</RelativeLayout>

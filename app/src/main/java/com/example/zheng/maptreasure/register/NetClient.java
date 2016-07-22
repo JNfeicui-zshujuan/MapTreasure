@@ -1,5 +1,6 @@
 package com.example.zheng.maptreasure.register;
 
+import com.example.zheng.maptreasure.treasure.TreasureApi;
 import com.google.gson.Gson;
 
 import java.util.concurrent.TimeUnit;
@@ -54,4 +55,14 @@ public class NetClient {
         }
         return userApi;
     }
+
+    private TreasureApi treasureApi;
+
+    public TreasureApi getTreasureApi() {
+        if (treasureApi == null) {
+            treasureApi = retrofit.create(TreasureApi.class);
+        }
+        return treasureApi;
+    }
+
 }
